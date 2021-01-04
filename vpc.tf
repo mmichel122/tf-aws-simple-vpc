@@ -92,7 +92,7 @@ data "template_file" "userdata" {
 # Create Instance 01
 resource "aws_instance" "server" {
   count                       = var.vm-count
-  ami                         = "ami-0f83d76c5da014440"
+  ami                         = "ami-08d0b6a95e13d8252"
   instance_type               = "t2.micro"
   #user_data                   = "${data.template_file.userdata.rendered}"
   associate_public_ip_address = false
