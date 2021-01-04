@@ -79,7 +79,7 @@ resource "aws_route_table_association" "public" {
 
 # Create EIP for the App servers.
 resource "aws_eip" "Servers" {
-  count    = aws_subnet.Public_subnet.count
+  count    = var.vm-count
   vpc      = true
   instance = element(aws_instance.server.*.id, count.index)
 }
