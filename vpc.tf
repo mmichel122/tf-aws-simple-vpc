@@ -1,3 +1,6 @@
+variable "region" {
+}
+
 variable "env_name" {
 }
 
@@ -11,6 +14,10 @@ variable "workspace_name" {
 }
 
 variable "workspace_team" {
+}
+
+provider "aws" {
+  region = var.region
 }
 
 # Get AZs
