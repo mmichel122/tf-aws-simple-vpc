@@ -1,21 +1,10 @@
-# SIMPLE VPC
-# AWS Creds
-provider "aws" {
-  region  = "eu-west-2"
-  profile = "logging"
-}
-
-# Variables
 variable "env_name" {
-  default = "WindowsApp"
 }
 
 variable "vpc_cidr" {
-  default = "10.15.0.0/16"
 }
 
 variable "vm-count" {
-  default = 2
 }
 
 variable "workspace_name" {
