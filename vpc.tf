@@ -18,6 +18,12 @@ variable "vm-count" {
   default = 2
 }
 
+variable "workspace_name" {
+}
+
+variable "workspace_team" {
+}
+
 # Get AZs
 data "aws_availability_zones" "available" {}
 
