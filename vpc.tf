@@ -34,7 +34,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
 
   tags = {
-    Name   = "${var.env_name} VPC"
+    Name   = "${var.workspace_name} VPC"
     Deploy = "vpc"
   }
 }
@@ -44,7 +44,7 @@ resource "aws_internet_gateway" "vpc" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    Name   = "${var.env_name} Internet Gateway"
+    Name   = "${var.workspace_team} Internet Gateway"
     Deploy = "vpc"
   }
 }
